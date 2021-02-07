@@ -15,4 +15,9 @@ class Ingredient extends Model
         'expired_at',
         'stock'
     ];
+
+    public function foods()
+    {
+        return $this->belongsToMany(Food::class, 'ingredient_food');
+    }
 }
