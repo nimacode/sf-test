@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,4 +22,5 @@ Route::group(['prefix' => 'v1'], function () {
     });
 
     Route::get('/menu', [MenuController::class, 'index']);
+    Route::post('/order', [OrderController::class, 'orderFactory']);
 });

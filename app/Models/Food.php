@@ -22,4 +22,9 @@ class Food extends Model
     {
         return $this->belongsToMany(Ingredient::class, 'ingredient_food');
     }
+
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
 }

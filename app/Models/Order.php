@@ -13,4 +13,9 @@ class Order extends Model
         'user_id',
         'food_id'
     ];
+
+    public function foods()
+    {
+        return $this->belongsTo(Food::class);
+    }
 }
